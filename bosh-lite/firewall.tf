@@ -11,6 +11,7 @@ resource "aws_security_group" "bosh-lite" {
   }
 
   ingress {
+    self = true
     from_port = 22
     to_port   = 22
     protocol  = "tcp"
