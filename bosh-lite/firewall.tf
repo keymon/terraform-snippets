@@ -19,6 +19,7 @@ resource "aws_security_group" "bosh-lite" {
   }
 
   ingress {
+    self = true
     from_port = 80
     to_port   = 80
     protocol  = "tcp"
@@ -26,6 +27,7 @@ resource "aws_security_group" "bosh-lite" {
   }
 
   ingress {
+    self = true
     from_port = 443
     to_port   = 443
     protocol  = "tcp"
@@ -33,6 +35,7 @@ resource "aws_security_group" "bosh-lite" {
   }
 
   ingress {
+    self = true
     from_port = 4443
     to_port   = 4443
     protocol  = "tcp"
@@ -40,6 +43,7 @@ resource "aws_security_group" "bosh-lite" {
   }
 
   ingress {
+    self = true
     from_port = 25555
     to_port   = 25555
     protocol  = "tcp"
