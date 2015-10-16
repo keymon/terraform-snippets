@@ -4,4 +4,7 @@ output "bosh-lite-sg" {
 output "bosh-lite-subnet" {
   value = "${aws_subnet.bosh-lite.id}"
 }
+output "env" {
+  value = "${var.env}"
+}
 
