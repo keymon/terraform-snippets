@@ -6,7 +6,7 @@ Setups the minimum elements to run [`bosh-lite`](https://github.com/cloudfoundry
 Usage:
 
  1. Run terraform: `terraform apply`
- 2. Generate the needed environment variables:
+ 2. Generate the needed environment variables, or run `. ./init-env.sh`:
 
     ```
 # Region to use
@@ -70,7 +70,7 @@ gsed -i "s/PLACEHOLDER-DIRECTOR-UUID/$BOSH_UUID/;" manifests/cf-stub-spiff.yml
 bin/provision_cf
 ```
 
-Now you can deploy an app:
+And you are ready to deploy an app:
 ```
 # Login in CF, create a org+space, etc
 cf api --skip-ssl-validation https://api.10.244.0.34.xip.io
