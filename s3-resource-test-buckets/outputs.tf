@@ -8,7 +8,7 @@ export S3_TESTING_SECRET_ACCESS_KEY="$(echo "${aws_iam_access_key.s3_resource_te
 export S3_TESTING_BUCKET="${aws_s3_bucket.s3_resource_test_bucket_no_version.id}"
 export S3_VERSIONED_TESTING_BUCKET="${aws_s3_bucket.s3_resource_test_bucket_version.id}"
 export S3_TESTING_REGION="${var.aws_default_region}"
-export S3_ENDPOINT="https://s3.amazonaws.com"
+export S3_ENDPOINT="https://s3-${var.aws_default_region}.amazonaws.com"
 EOF
 }
 

@@ -13,12 +13,17 @@ resource "aws_iam_policy" "S3ResourceTestBucketPolicies" {
       "s3:PutObject",
       "s3:PutObjectAcl",
       "s3:GetObject",
+      "s3:GetObjectAcl",
+      "s3:DeleteObject",
+      "s3:DeleteObjectVersion",
       "s3:ListBucketVersions",
       "s3:GetBucketVersioning",
       "s3:GetObjectVersion",
       "s3:PutObjectVersionAcl"
     ],
     "Resource": [
+      "${aws_s3_bucket.s3_resource_test_bucket_no_version.arn}/*",
+      "${aws_s3_bucket.s3_resource_test_bucket_version.arn}/*",
       "${aws_s3_bucket.s3_resource_test_bucket_no_version.arn}",
       "${aws_s3_bucket.s3_resource_test_bucket_version.arn}"
     ],
